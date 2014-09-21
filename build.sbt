@@ -26,7 +26,7 @@ addSbtPlugin("org.scala-lang.modules.scalajs" % "scalajs-sbt-plugin" % "0.5.5")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-web" % "1.1.0")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.0.1")
+//addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.0.1")
 
 publishMavenStyle := true
 

@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# qtest script - 
+#
+pass=true
+ for i in `cat qtest.txt`;do
+  if [ ! -f $i ] 
+   then 
+   echo file $i does not exist
+   pass=false
+ fi
+done
+
+if [ $pass = true ] 
+  then 
+    echo all tests passed    
+  else
+    echo Tests FAILED !!!!
+fi

@@ -127,7 +127,7 @@ Publishes to:
 So, we add one line of code to our build file and we get a new artifact published. One source tree, one project, 
 two artifacts. This is just how we want things to be!
 
-And then comes a feature request, a pretty easy it turns out as the new macro features in 2.11 allow us to easily...stop.
+And then comes a feature request, a pretty easy it turns out as the new macro features in 2.11 allow us to easily...  stop!
   
 What about 2.10? These new features are not available, we know our cross-compile will not work. And what if there turns out to be 
  a bug in the 2.10 build that was neatly fixed in 2.11. If we patch 2.10, the 2.11 will get the same "hack". And if we branch 
@@ -142,7 +142,7 @@ So, as done in most cross-compiling projects over the last few decades, we split
  3. 2.11 version. This contains *only* the code for 2.11. Ideally, this should even be empty. 
  
 An obvious question at this point is: "What is the point of having two empty projects?" To answer that, we have to look at 
-the structure. Before that, let's recap. Before we had one project, one source tree. Now we have three source trees, and four
+the structure. But first, let us recap. Before we had one project and one source tree. Now we have three source trees, and four
 targets. But recall that eclipse has the rule of one project per directory - that means we need three projects. But if our
 root project is now to be the "master" project for all three, then we must also put the common source into its own project.
 
@@ -182,7 +182,7 @@ Cross Compile, scalajs Multi_IDE Project
 ----------------------------------------
 
 We will now look at a final example, cross compiling our source to javascript using the scalajs compiler add-in. In many ways,
-this is just the same as before, we want one code base, many targets. For simplicity, we will remove the split of the scala
+this is just the same as before: we want one code base, many targets. For simplicity, we will remove the split of the scala
  versions as they can always be added later.
  
 One important difference here is that sbt cannot do the cross-compile for us, we have to do it ourselves (as scalajs comes 
@@ -245,7 +245,7 @@ From the above, we see that sbt adds cross-compilation tags with an undersore, a
  continued that convention with for all of the sub-module details, leaving hyphens just for the underlying project name and 
  version.
    
-As final thought, if we to move ths three source directories, this would enable us to create an new aggregate root
+As final thought, if we were to move these three source directories, this would enable us to create an new aggregate root
 project that would include both the MyProject_2.10 and MyProject_2.11 artifacts - useful for client projects that are themselves
 cross-compiled.
 

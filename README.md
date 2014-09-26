@@ -174,7 +174,9 @@ Publishes to:
 
 As to why we need an empty project? Well the not so cool answer is that we really have to, to keep the IDE's happy. **But**,
 it does not have to be a "real" project - if there is no source, just set the base to ".MyProject_2.10" and the IDE's will 
-add an empty project there. But if you do need to add some source at some point, move it to  "MyProject_2.10".  
+add an empty project there. But if you do need to add some source at some point, move it to  "MyProject_2.10". The real 
+value here is that clients do not know nor care, they just include MyProject_2.10 - they don't even have to know about base 
+(partly why base is prefixed with an underscore, more on that later)
  
 Cross Compile, scalajs Multi_IDE Project
 ----------------------------------------
@@ -251,7 +253,7 @@ Examples
 ========
 
 * For a cross-compiling project, see [scalatest-jasmine](https://github.com/InTheNow/scalatest-jasmine)
-* For a multi-ide, multi-module, cross-compiling and cross-testing project, see [the jasminr branch of banana-rdf](https://github.com/InTheNow/banana-rdf/tree/jasmine)
+* For a multi-ide, multi-module, cross-compiling and cross-testing project, see [the jasmine branch of banana-rdf](https://github.com/InTheNow/banana-rdf/tree/jasmine)
 
 Experimental
 ============

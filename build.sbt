@@ -4,7 +4,7 @@ organization := "com.github.inthenow"
 
 name := "sbt-scalajs"
 
-version := "0.5.5-SNAPSHOT"
+version := "0.5.5.0"
 
 scalaVersion := "2.10.4"
 

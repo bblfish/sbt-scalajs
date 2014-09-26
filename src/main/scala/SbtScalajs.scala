@@ -29,7 +29,7 @@ object SbtScalajs extends AutoPlugin {
       Seq(
       )
 
-  val noRootsettings = Seq(
+  val noRootSettings = Seq(
     publish := {},
     publishLocal := {}
   )
@@ -58,7 +58,6 @@ object SbtScalajs extends AutoPlugin {
     unmanagedSourceDirectories in Test ++= (unmanagedSourceDirectories in(sharedSrc, Test)).value,
     unmanagedResourceDirectories in Compile ++= (unmanagedResourceDirectories in(sharedSrc, Compile)).value,
     unmanagedResourceDirectories in Test ++= (unmanagedResourceDirectories in(sharedSrc, Test)).value
-
   )
 
   def sjsResources(prjJs: Project) = Seq(
